@@ -1,10 +1,51 @@
+body {
+    background-color: #FFC0CB;
+}
 #game_board {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
+    box-sizing: content-box;
 }
+
+#game_controls {
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -124px);
+    color: #4c9ed9;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
 #game_score {
-    text-align: center;
-    font-size: 80px;
+    flex: 0 1 30%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#game_score > span {
+    margin-left: 6px;
+}
+
+#game_speed {
+    flex: 1 1;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#game_speed_value {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

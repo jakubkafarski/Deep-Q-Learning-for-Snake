@@ -5,7 +5,13 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
-    <div id="game_score">0</div>
+    <div id="game_controls">
+        <div id="game_score">score:<span>0</span></div>
+        <div id="game_speed">
+            <span id="game_speed_title">speed:</span>
+            <span id="game_speed_value">1 <input type="range" name="snakesSpeed" min="1" max="100" value="1" id="game_speed_value_input"> 100</span>
+        </div>
+    </div>
     <canvas id="game_board" width="400" height="400"></canvas>
 </body>
 <script src="game.js"></script>
