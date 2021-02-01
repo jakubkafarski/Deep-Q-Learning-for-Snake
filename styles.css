@@ -50,6 +50,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#game_speed_value_input:focus {
+    outline: none;
+}
+
 #game_speed_value {
     margin-left: 10px;
     display: flex;
