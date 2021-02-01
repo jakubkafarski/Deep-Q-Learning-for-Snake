@@ -43,6 +43,13 @@ body {
 }
 
 
+#game_speed_title {
+    width: 65px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #game_speed_value {
     margin-left: 10px;
     display: flex;

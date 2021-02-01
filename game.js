@@ -39,19 +39,22 @@ const snakeBoard = document.getElementById('game_board');
 const snakeBoard_ctx = snakeBoard.getContext('2d');
 
 // Start game
-main({ speed: document.getElementById('game_speed_value_input').value });
+main(document.getElementById('game_speed_value_input').value);
 
 gen_food();
 
 document.addEventListener('keydown', change_direction);
 
 // main function called repeatedly to keep the game running
-function main({ speed = 1 }) {
+function main(speed) {
+  const gameSpeed = 100 / speed;
+  if (speed) {
+    document.querySelector('#game_speed_title > span').innerHTML = speed;
+  }
   if (has_game_ended()) {
     // restart game
     dx = 10;
     dy = 0;
-
     score = 0;
     snake = [
       { x: 200, y: 200 },
@@ -69,9 +72,9 @@ function main({ speed = 1 }) {
       move_snake();
       drawSnake();
       main();
-    }, 100 / speed);
+    }, gameSpeed);
+    return false;
   }
-
   changing_direction = false;
   setTimeout(() => {
     clear_board();
@@ -79,8 +82,8 @@ function main({ speed = 1 }) {
     move_snake();
     drawSnake();
     // Repeat
-    main({ speed: document.getElementById('game_speed_value_input').value });
-  }, 100 / speed);
+    main(document.getElementById('game_speed_value_input').value);
+  }, gameSpeed);
 }
 
 // draw a border around the canvas
