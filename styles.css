@@ -2,25 +2,52 @@ body {
     background-color: #FFC0CB;
 }
 #game_board {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
     box-sizing: content-box;
 }
 
+#game {
+    display: flex;
+}
+
 #game_controls {
-    width: 400px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -124px);
-    color: #4c9ed9;
-    background-color: white;
+    height: 60px;
     display: flex;
     flex-direction: row;
-    align-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #4c9ed9;
+    background-color: white;
+}
+
+#game_controls_left {
+    width: 620px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+}
+
+#game_controls_right {
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+}
+
+#game_controls_right__status > span {
+    font-weight: bolder;
+}
+
+#game_controls_right__buttons {
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+button {
+    height: 40px;
+    margin-right: 10px;
 }
 
 #game_score {
@@ -60,4 +87,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#nn_details {
+    display: flex;
+    width: calc(100% - 400px);
+    margin-left: 10px;
+    padding: 10px;
+    color: #4c9ed9;
+    background-color: white;
+}
+
+#nn_details p {
+    margin: 0;
+}
+
+#nn_details__info {
+    width: 200px;
+}
+
+#nn_details__map {
+    margin-left: 10px;
+    padding: 10px;
+    flex: 1 1;
+    border: 1px solid #dedede;
 }
