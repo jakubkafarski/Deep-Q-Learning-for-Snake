@@ -7,5 +7,3 @@
 ~~controls~~
 
 dqn
-
-model
